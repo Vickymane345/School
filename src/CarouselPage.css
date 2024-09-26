@@ -1,0 +1,43 @@
+.carousel-caption  {
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  
+    
+}
+
+.carousel-caption h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 900;
+  font-style: normal; 
+  font-size: 80px; 
+
+}
+.carousel-item img{
+     filter: blur(3px);
+}
+.carousel-caption div{
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: bolder;
+  font-style: normal;
+  font-size: 30px;
+  color:darkblue;
+  
+  
+}
+.carousel-caption button{
+    padding-top: 20px;
+    background-color: white;
+    color: black;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 4px 4px 4px black;
+    font-family: "STIX Two Text", serif;
+}
+
+.carousel-caption button:hover{
+    background-color: darkblue;
+    color: white;
+    font-family: "STIX Two Text", serif;
+}
