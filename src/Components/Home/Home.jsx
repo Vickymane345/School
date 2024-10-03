@@ -21,15 +21,15 @@ const Home = () => {
     }
 
     return (
-        <div className='py-14 h-96 '>
-            <CarouselPage/>
-            <section className='py-5 px-40 z-80  '>
+        <div className='lg:py-14 h-96 '>
+            <CarouselPage />
+            <section className='lg:py-5 lg:px-40 py-5 md:py-5 md:px-10  z-80  '>
                 <h1 className='text-center'>About Us</h1>
                 <h1 className='text-center'>The Journey In Bloffville</h1>
-                <div className='flex pt-16 '>
+                <div className='lg:flex md:flex pt-16 '>
                     <ScrollAnimation className='w-full ' animateIn="bounceInLeft">
                         <img
-                            className='w-[70%] m-auto'
+                            className='lg:w-[70%] w-[80%] m-auto'
                             style={{
                             borderRadius: "50%"
                         }}
@@ -37,9 +37,9 @@ const Home = () => {
                             alt=""/>
 
                     </ScrollAnimation>
-                    <ScrollAnimation className=' w-full m-auto' animateIn="bounceInRight">
-                        <div className='space-x-10 text-2xl flex'>
-                            <div className='items-center flex'>
+                    <ScrollAnimation className='py-5 lg:py-0 md:py-0 sm:py-0 w-full m-auto' animateIn="bounceInRight">
+                        <div className=' sm:px-0 px-3 lg:px-0 md:px-0 space-x-10 text-2xl flex sm:justify-center '>
+                            <div className='items-center flex '>
                                 <FaGraduationCap/>
                                 <button
                                     onClick={() => {
@@ -49,7 +49,7 @@ const Home = () => {
                                 }}
                                     className={`${bloffvilleSchool
                                     ? "text-gray-500"
-                                    : "text-blue-900"}`}>Bloffville Schools</button>
+                                    : "text-blue-900"} lg:py-[20px]  md:py-[20px] md:px-[15px] py-[10px]sm:px-[20px] sm:py-[20px] px-[5px] lg:px-[20px] bottom-2 shadow-xl shadow-black `}>Bloffville Schools</button>
                             </div>
 
                             <div className='flex text-gray-500 items-center '>
@@ -58,11 +58,11 @@ const Home = () => {
                                     onClick={toggleMenu}
                                     className={`${bloffvilleSchool
                                     ? "text-blue-900"
-                                    : "text-gray-500"}`}>Our History</button>
+                                    : "text-gray-500"} md:py-[20px] md:px-[15px] py-[10px] px-[5px] lg:px-[20px] sm:px-[20px] sm:py-[20px] bottom-2 shadow-xl shadow-black`}>Our History</button>
                             </div>
 
                         </div>
-                        <div className='py-4'>
+                        <div className='py-4 px-4 lg:px-0 md:px-0 sm:px-0'>
                             <p
                                 className={`leading-10 ${bloffvilleSchool
                                 ? 'hidden'
@@ -87,7 +87,7 @@ const Home = () => {
                                 (years 7 - 12) located in the suburb of Igbogbo, Ikorodu Lagos state, Nigeria.
                             </p>
 
-                            <button className='bg-blue-800 text-white'>More About</button>
+                            <button className='bg-blue-800 md:py-[20px] md:px-[15px] py-[10px] px-[5px] lg:px-[20px] bottom-2 shadow-xl shadow-black text-white'>More About</button>
                         </div>
                     </ScrollAnimation>
                 </div>
@@ -100,9 +100,9 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section className='py-20 my-10'>
+            <section className='py-10 lg:px-40 my-10'>
                 <h1 className='text-center font-extrabold'>Blotiville Past Events</h1>
-                <div className='grid grid-cols-3 gap-5 px-36 py-24 '>
+                <div className='grid lg:grid-cols-3 gap-5 px-4 md:grid-cols-3 md:px-28 md:py-24  lg:py-24 '>
                     {card.map(({id, image, title, desc, btn}) => {
                         return (
                             <div className=' relative group shadow border-2 ' key={id}>
@@ -111,7 +111,7 @@ const Home = () => {
                                 </div>
                                 <div className='px-4 py-2 '>
                                     <div>
-                                        <h1 className='text-3xl'>{title}</h1>
+                                        <h1 className='text-xl lg:text-3xl md:text-xl sm:text-xl '>{title}</h1>
                                     </div>
                                     <div className='text-gray-500'>
                                         <p>{desc}</p>
@@ -140,26 +140,26 @@ const Home = () => {
                     })}
                 </div>
             </section>
-            <section className='bg-blue-900 py-20 px-40  '>
+            <section className='bg-blue-900 lg:py-20 lg:px-40 py-5 sm:px-5 px-5 md:px-4 '>
                 <div className=''>
                     <h1 className='text-center text-white font-extrabold'>Our Services</h1>
                     <h1 className='text-center text-white font-bold'>WHY BLOFVILLE SCHOOL?</h1>
-                    <div className='flex py-14  '>
+                    <div className='lg:flex   lg:py-14 md:py-14 py-5 sm:py-5  '>
                         <ScrollAnimation animateIn='bounceInLeft' className='w-full'>
                             <img
                                 src={image1}
-                                className='w-[90%] m-auto'
+                                className='lg:w-[90%] md:w-[80%] w-full m-auto'
                                 style={{
                                 borderRadius: "50%"
                             }}
                                 alt=""/>
 
                         </ScrollAnimation>
-                        <ScrollAnimation className='text-2xl w-full' animateIn='bounceInRight'>
-                            <p className=' leading-10 font-serif text-white'>Bloffville school is a dynamic
+                        <ScrollAnimation className='text-2xl w-full sm:py-4 py-5 lg:py-0 md:py-0 ' animateIn='bounceInRight'>
+                            <p className=' lg:leading-10 text-xl lg:text-3xl md:text-2xl md:leading-10 text-justify md:text-start lg:text-start font-serif text-white'>Bloffville school is a dynamic
                                 and thriving educational environment offering strong educational programs in
                                 Nigeria. Here are some reasons why you should choose us</p>
-                            <div className='flex text-white'>
+                            <div className='flex  text-white text-xl  md:text-2xl '>
                                 <ul className='list-disc font-mono '>
                                     <li>Student Support</li>
                                     <li>Our Campus</li>
@@ -179,10 +179,10 @@ const Home = () => {
                 </div>
             </section>
 
-            <section className='py-24 px-40 '>
+            <section className='lg:py-24 lg:px-40 px-4 pt-5 '>
                 <h1 className='text-center font-extrabold'>School Blog</h1>
 
-                <div className='grid grid-cols-3 gap-4 py-16 '>
+                <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-4 py-10 lg:py-16 lg:px-32 '>
                     {blog.map(({
                         id,
                         title,
@@ -195,9 +195,9 @@ const Home = () => {
                         return (
                             <ScrollAnimation
                                 animateIn='zoomIn'
-                                className='hover: border-2 rounded-3xl shadow-2xl '>
+                                className='hover:border-2 rounded-3xl shadow-2xl '>
                                 <div>
-                                    <img src={image} className='h-80 rounded-xl touch-pinch-zoom' alt=""/>
+                                    <img src={image} className='h-80 w-full rounded-xl touch-pinch-zoom' alt=""/>
                                 </div>
                                 <div className='pt-2 pr-4'>
                                     <ul className='flex justify-between'>
@@ -217,7 +217,7 @@ const Home = () => {
                                     <h1 className='text-xl'>{title}</h1>
                                 </div>
                                 <div className='px-4 py-4'>
-                                    <button className='bg-blue-900 text-white hover:bg-yellow-300 '>{btn}</button>
+                                    <button className='bg-blue-900 p-4 shadow-xl md:hover:bg-yellow-300 hover:bg-yellow-300 sm:hover-yellow-300 text-white lg:hover:bg-yellow-300 '>{btn}</button>
                                 </div>
                             </ScrollAnimation>
                         )
@@ -226,7 +226,7 @@ const Home = () => {
             </section>
 
             <section
-                className='bg-yellow-400 rounded-3xl py-10 text-center absolute w-[80%]  right-32'>
+                className='bg-yellow-400 rounded-3xl py-10 text-center absolute w-[80%] sm:w-80% sm:left-16 left-10 lg:w-[80%] md:w-[78%] md:m-auto md:right-20   lg:right-32'>
                 <div className='pt-12'>
                     <h1>JOIN BLOFFVILLE'S NEWSLETTER</h1>
                 </div>
@@ -243,7 +243,7 @@ const Home = () => {
                 </div>
             </section>
             <footer className='mt-56    text-white bg-blue-950'>
-                <div className='py-28  flex justify-evenly'>
+                <div className='grid grid-cols-2  gap-4 px-4  lg:py-28 pt-28 md-pt-20 md:px-5 lg:flex md:grid md:grid-cols-3 lg:justify-evenly'>
                     <div className='space-y-6 '>
                         <img src={logo} alt=""/>
                         <h1>Want to be
@@ -275,7 +275,7 @@ const Home = () => {
                             <FaMailBulk/>
                             <h2 className='text-xl font-serif font-bold'>Send Mail</h2>
                         </div>
-                        <p>info.high@bloffvilleschools.org</p>
+                        <p>info.high@<br/>bloffvilleschools.org</p>
                         <div className='flex space-x-2 items-center'>
                             <FaLocationArrow/>
                             <h2 className='text-xl font-serif font-bold'>Address</h2>
@@ -294,7 +294,7 @@ const Home = () => {
                             <FaMailBulk/>
                             <h2 className='text-xl font-serif font-bold'>Send Mail</h2>
                         </div>
-                        <p>info.elementary@bloffvilleschools.org</p>
+                        <p>info.elementary@<br/>bloffvilleschools.org</p>
                         <div className='flex items-center space-x-2'>
                             <FaLocationArrow/>
                             <h2 className='text-xl font-serif font-bold'>Address</h2>
