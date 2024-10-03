@@ -2,3 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+    overflow-x: hidden;
+}
+
+@media (max-width:1023px) {
+  
+    nav ul{
+        position: fixed;
+        top:0;
+        left: 0;
+        background: darkblue;
+        height: 100vh;
+        z-index: 10;
+        bottom: 0;
+        width: 200px;
+        padding-top: 40px;
+        transition: 0.5s;
+        
+        
+    }
+    nav ul li{
+        display: block;
+        align-items: center;
+        padding: 9px;
+    }
+
+
+    .hide-mobile-menu{
+        left: -200px;
+    }
+    }
