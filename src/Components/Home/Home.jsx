@@ -14,11 +14,14 @@ import blog from '../../blog'
 const Home = () => {
     const [bloffvilleSchool,
         setbloffvilleSchool] = useState(false);
-    const toggleMenu = () => {
-        bloffvilleSchool
-            ? setbloffvilleSchool(false)
-            : setbloffvilleSchool(true)
-    }
+        
+        function toggleClick() {
+            setbloffvilleSchool(false)
+        }
+
+        function handleClick() {
+            setbloffvilleSchool(true)
+        }
 
     return (
         <div className='lg:py-14 h-96 '>
@@ -42,11 +45,7 @@ const Home = () => {
                             <div className='items-center flex '>
                                 <FaGraduationCap/>
                                 <button
-                                    onClick={() => {
-                                    bloffvilleSchool
-                                        ? setbloffvilleSchool(false)
-                                        : setbloffvilleSchool(true)
-                                }}
+                                    onClick={toggleClick}
                                     className={`${bloffvilleSchool
                                     ? "text-gray-500"
                                     : "text-blue-900"} lg:py-[20px]  md:py-[20px] md:px-[15px] py-[10px]sm:px-[20px] sm:py-[20px] px-[5px] lg:px-[20px] bottom-2 shadow-xl shadow-black `}>Bloffville Schools</button>
@@ -55,7 +54,7 @@ const Home = () => {
                             <div className='flex text-gray-500 items-center '>
                                 <FaHistory/>
                                 <button
-                                    onClick={toggleMenu}
+                                    onClick={handleClick}
                                     className={`${bloffvilleSchool
                                     ? "text-blue-900"
                                     : "text-gray-500"} md:py-[20px] md:px-[15px] py-[10px] px-[5px] lg:px-[20px] sm:px-[20px] sm:py-[20px] bottom-2 shadow-xl shadow-black`}>Our History</button>
